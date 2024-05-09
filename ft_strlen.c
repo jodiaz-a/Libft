@@ -23,12 +23,3 @@ size_t	ft_strlen(const char *str)
 	}
 	return (cont);
 }
-/*int main() {
-    char str1[] = "";
-    char str2[] = "Hello world";
-    char str3[] = "this is a test, strong roots facing the sun";
-    printf("'%s' character string length: %lu\n", str1, strlen(str1), ft_strlen(str1));
-    printf("'%s' character string length: %lu\n", str2, strlen(str2), ft_strlen(str2));
-    printf("'%s' character string length: %lu\n", str3, strlen(str3), ft_strlen(str3));
-    return 0;
-}*/

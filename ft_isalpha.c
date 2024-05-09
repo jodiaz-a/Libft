@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include <stdio.h>
 
 int	ft_isalpha(int c)
 {
@@ -20,27 +21,9 @@ int	ft_isalpha(int c)
 		return (0);
 }
 
-/*int	main()
+/*int main(void)
 {
-	char c1 = 'a';
-   	char c2 = '+';
-   	
-   	if (isalpha(c1))
-   	{
-   	    printf("the character '%c' belongs to the alphabet. \n", c1);
-   	}
-   	    else 
-            {
-            printf("the character '%c' does not belong to the alphabet. \n",c1);
-            }
-            
-            if (isalpha(c2))
-   	{
-   	    printf("the character '%c' belongs to the alphabet. \n", c2);
-   	}
-   	    else 
-            {
-            printf("the character '%c' does not belong to the alphabet. \n",c2);
-            }
-    return(0);
+	char c = 'M'; 
+	printf("%d\n", ft_isalpha(c));
+	return (0);
 }*/

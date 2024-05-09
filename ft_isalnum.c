@@ -12,23 +12,15 @@
 
 #include "libft.h"
 
- int ft_isalnum(int c)
- {
-    if ((c >= 'a' && c <= 'z') || (c >= 'A' &&  c <= 'Z') || (c >= '0' && c <= '9' ))
+int	ft_isalnum(int c)
+{
+	int	isnum;
+	int	isletter;
 
-        retun(1);
-    else
-        return(0);
- }
-
- /*int main() 
- {
-    char c;
-    c = '4';
-
-    if (isalnum(c))
-        printf("%c is alphanumeric (1)\n", c);
-    else
-        printf("%c is not alphanumeric (0)\n", c);
-   return 0;
-}*/
+	isnum = ft_isdigit(c);
+	isletter = ft_isalpha(c);
+	if (isnum || isletter)
+		return (1);
+	else
+		return (0);
+}

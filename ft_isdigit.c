@@ -12,32 +12,10 @@
 
 #include "libft.h"
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    if (c > '/' && c < ':')
-        return (1);
-    return (0);
+	if (c >= 48 && c <= 57)
+		return (1);
+	else
+		return (0);
 }
-
-/*int main ()
-{
-    char c1 = '4';
-    char c2 = '+';
-
-    if (isdigit(c1))
-        {
-            printf("The character '%c' is a decimal digit. \n", c1);
-        }   
-            else 
-            {
-            printf("the character '%c' is not a decimal digit. \n",c1);
-            }
-    if (isdigit(c2))
-        {
-            printf("The character '%c' is a decimal digit. \n", c2);
-        }   
-            else 
-            {
-            printf("the character '%c' is not a decimal digit. \n",c2);
-            }
-}*/

@@ -12,23 +12,10 @@
 
 #include "libft.h" 
 
-int ft_ascii(int c)
+int	ft_isascii(int c)
 {
-    if (c >= 0 && c <= 127)
-    return (1);
-else
-    return (0);
-}
-
-/*int main ()
-{
-    char myCharacter = 'A'; // Puedes cambiar este carácter para probar diferentes valores
-
-    if (isascii(myCharacter)) 
-    {
-        printf("The character '%c'is ASCII.\n", myCharacter);
-    } else {
-        printf("The character '%c' is not ASCII.\n", myCharacter);
-    }
-    return 0;
+	if (c >= 0 && c <= 127)
+		return (1);
+	else
+		return (0);
 }
