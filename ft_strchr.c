@@ -6,39 +6,40 @@
 /*   By: jodiaz <jodiaz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 02:26:01 by jodiaz            #+#    #+#             */
-/*   Updated: 2024/05/09 22:38:25 by jodiaz           ###   ########.fr       */
+/*   Updated: 2024/05/15 01:15:24 by jodiaz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	char	cchar;
+	int	i;
 
-	cchar = (char)c;
-	while (*str != '\0')
+	i = 0;
+	while (s[i])
 	{
-		if (*str == cchar)
-			return ((char *)str);
-		str++;
+		if ((char)c == s[i])
+			return (&((char *)s)[i]);
+		i++;
 	}
-	if (cchar == '\0')
-		return ((char *)str);
+	if ((char)c == '\0')
+		return (&((char *)s)[i]);
 	return (0);
 }
 
-/*int main() 
+/*int main(void)
 {
-    const char *mi_cadena = "Hola, Mundo!";
-    char c = 'H';
-    char *resultado = ft_strchr(mi_cadena, c);
+	const char *str = "Hello, world!";
+	int target_char = 'w';
 
-    if(resultado != NULL) {
-        printf("El carácter '%c' se encontró en la cadena.\n", c);
-    } else {
-        printf("El carácter '%c' no se encontró en la cadena.\n", c);
-    }
+	char *result = ft_strchr(str, target_char);
 
-    return (0);
+	if (result)
+		printf("El carácter '%c' se encuentra en la posición %ld de la cadena.\n",
+	 target_char, result - str);
+	else
+		printf("El carácter '%c' no se encuentra en la cadena.\n", target_char);
+
+	return 0;
 }*/

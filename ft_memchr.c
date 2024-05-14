@@ -1,43 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jodiaz <jodiaz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/02 23:17:45 by jodiaz            #+#    #+#             */
-/*   Updated: 2024/05/14 14:01:27 by jodiaz           ###   ########.fr       */
+/*   Created: 2024/05/10 14:33:49 by jodiaz            #+#    #+#             */
+/*   Updated: 2024/05/14 13:05:15 by jodiaz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t	i;
-	char	*copy;
-	char	*original;
 
-	copy = (char *)dst;
-	original = (char *)src;
 	i = 0;
-	if (dst == NULL && src == NULL)
-		return (dst);
 	while (i < n)
 	{
-		copy[i] = original[i];
+		if (((unsigned char *)s)[i] == (unsigned char)c)
+			return (&((unsigned char *)s)[i]);
 		i++;
 	}
-	return (dst);
+	return (0);
 }
+
 /*int main(void)
 {
-    char src[] = "Hello, world!";
-    char dst[20]; // Asegúrate de que el tamaño de 'dst' sea suficiente
+	char *str1 = "Hello World";
+	char cchar = 'd';
+	char *result = ft_memchr(str1, cchar, ft_strlen(str1));
 
-    ft_memcpy(dst, src, strlen(src));
-
-    printf("Cadena copiada: %s\n", dst);
+	if (result)
+    {
+        printf("Caracter encontrado: %c\n", *result);
+        printf("Longitud de la cadena encontrada: %zu\n", strlen(result));
+    }
+    else
+    {
+        printf("Caracter no encontrado.\n");
+    }
 
     return 0;
 }*/

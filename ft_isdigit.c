@@ -19,3 +19,15 @@ int	ft_isdigit(int c)
 	else
 		return (0);
 }
+
+/*int main(void)
+{
+	char ch = '7'; // Cambia el carácter aquí para probar diferentes valores
+
+	if (ft_isdigit(ch))
+		printf("%c es un dígito.\n", ch);
+	else
+		printf("%c no es un dígito.\n", ch);
+
+	return 0;
+}*/

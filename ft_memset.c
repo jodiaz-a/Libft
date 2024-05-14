@@ -26,3 +26,15 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
+
+/*int main(void)
+{
+    char buffer[20]; // Asegúrate de que el tamaño de 'buffer' sea suficiente
+    int value = 'X'; // Cambia el valor según tus necesidades
+
+    ft_memset(buffer, value, sizeof(buffer));
+
+    printf("Buffer después de ft_memset: %s\n", buffer);
+
+    return 0;
+}*/

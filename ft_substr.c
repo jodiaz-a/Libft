@@ -1,43 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jodiaz <jodiaz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/02 23:17:45 by jodiaz            #+#    #+#             */
-/*   Updated: 2024/05/14 14:01:27 by jodiaz           ###   ########.fr       */
+/*   Created: 2024/05/13 16:58:24 by jodiaz            #+#    #+#             */
+/*   Updated: 2024/05/15 01:18:00 by jodiaz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
-	char	*copy;
-	char	*original;
+	size_t	j;
+	char	*string;
 
-	copy = (char *)dst;
-	original = (char *)src;
+	if (!s || start > ft_strlen(s))
+		return (ft_strdup(""));
+	else if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
+	string = (char *)malloc(sizeof(char) * (len + 1));
+	if (string == 0)
+		return (NULL);
 	i = 0;
-	if (dst == NULL && src == NULL)
-		return (dst);
-	while (i < n)
+	j = 0;
+	while (s[i])
 	{
-		copy[i] = original[i];
+		if (i >= start && j < len)
+		{
+			string[j] = s[i];
+			j++;
+		}
 		i++;
 	}
-	return (dst);
+	string[j] = '\0';
+	return (string);
 }
-/*int main(void)
-{
-    char src[] = "Hello, world!";
-    char dst[20]; // Asegúrate de que el tamaño de 'dst' sea suficiente
-
-    ft_memcpy(dst, src, strlen(src));
-
-    printf("Cadena copiada: %s\n", dst);
-
-    return 0;
-}*/

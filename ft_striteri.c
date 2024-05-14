@@ -1,27 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jodiaz <jodiaz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/04 02:15:14 by jodiaz            #+#    #+#             */
-/*   Updated: 2024/05/15 01:09:29 by jodiaz           ###   ########.fr       */
+/*   Created: 2024/05/13 19:46:21 by jodiaz            #+#    #+#             */
+/*   Updated: 2024/05/15 01:14:25 by jodiaz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int i)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	if (i >= 'A' && i <= 'Z')
-		return (i + 32);
-	return (i);
+	int	i;
+
+	if (!s || !f)
+		return ;
+	i = 0;
+	while (s[i] != '\0')
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
-/*int main(void)
+/*void ft_iteri(unsigned int i, char *s)
 {
-    char tolow = 'l';
-    printf("Original: %c\t Lower_case: %c\n", tolow, ft_tolower(tolow));
-	return (0);
-    
+	printf("Char: %c, Index: %i \n", s[0] , i);
+}
+
+int main()
+{
+	char *s = "the power is yours";
+	ft_striteri(s, ft_iteri);
 }*/

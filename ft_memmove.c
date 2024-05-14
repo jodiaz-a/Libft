@@ -6,7 +6,7 @@
 /*   By: jodiaz <jodiaz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 23:42:52 by jodiaz            #+#    #+#             */
-/*   Updated: 2024/05/03 02:39:37 by jodiaz           ###   ########.fr       */
+/*   Updated: 2024/05/14 14:05:35 by jodiaz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,3 +39,14 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
+/*int main(void)
+{
+    char src[] = "Hello, world!";
+    char dst[20]; // Asegúrate de que el tamaño de 'dst' sea suficiente
+
+    ft_memmove(dst, src, strlen(src));
+
+    printf("Cadena copiada: %s\n", dst);
+
+    return 0;
+}*/

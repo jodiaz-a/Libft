@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jodiaz <jodiaz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/04 02:15:14 by jodiaz            #+#    #+#             */
-/*   Updated: 2024/05/15 01:09:29 by jodiaz           ###   ########.fr       */
+/*   Created: 2024/05/13 19:31:23 by jodiaz            #+#    #+#             */
+/*   Updated: 2024/05/14 11:55:24 by jodiaz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int i)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	if (i >= 'A' && i <= 'Z')
-		return (i + 32);
-	return (i);
+	int		i;
+	int		len_s1;
+	char	*string;
+
+	i = 0;
+	while (s1[i] && ft_strchr(set, s1[i]))
+		i++;
+	len_s1 = ft_strlen(s1);
+	while (len_s1 > i && ft_strrchr(set, s1[len_s1 - 1]))
+		len_s1--;
+	string = ft_substr(s1, i, len_s1 - i);
+	return (string);
 }
-/*int main(void)
-{
-    char tolow = 'l';
-    printf("Original: %c\t Lower_case: %c\n", tolow, ft_tolower(tolow));
-	return (0);
-    
-}*/

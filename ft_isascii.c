@@ -19,3 +19,15 @@ int	ft_isascii(int c)
 	else
 		return (0);
 }
+
+/*int	main(void)
+{
+	int c = 65; // Cambia el valor de 'c' según lo que quieras probar
+
+	if (ft_isascii(c))
+		printf("%c es un carácter ASCII válido.\n", c);
+	else
+		printf("%c no es un carácter ASCII válido.\n", c);
+
+	return 0;
+}*/

@@ -1,43 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jodiaz <jodiaz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/02 23:17:45 by jodiaz            #+#    #+#             */
-/*   Updated: 2024/05/14 14:01:27 by jodiaz           ###   ########.fr       */
+/*   Created: 2024/05/13 19:49:12 by jodiaz            #+#    #+#             */
+/*   Updated: 2024/05/14 14:19:23 by jodiaz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	ft_putchar_fd(char c, int fd)
 {
-	size_t	i;
-	char	*copy;
-	char	*original;
-
-	copy = (char *)dst;
-	original = (char *)src;
-	i = 0;
-	if (dst == NULL && src == NULL)
-		return (dst);
-	while (i < n)
-	{
-		copy[i] = original[i];
-		i++;
-	}
-	return (dst);
+	if (fd)
+		write(fd, &c, 1);
 }
 /*int main(void)
 {
-    char src[] = "Hello, world!";
-    char dst[20]; // Asegúrate de que el tamaño de 'dst' sea suficiente
+    char character = 'M'; // Cambia el carácter según tus necesidades
+    int fileDescriptor = 1; // Descriptor de archivo (1 para la salida estándar)
 
-    ft_memcpy(dst, src, strlen(src));
-
-    printf("Cadena copiada: %s\n", dst);
+    ft_putchar_fd(character, fileDescriptor);
 
     return 0;
 }*/

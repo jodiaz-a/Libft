@@ -18,3 +18,15 @@ int	ft_isprint(int c)
 		return (1);
 	return (0);
 }
+
+/*int	main(void)
+{
+	char c = 'A'; // Cambia el valor de 'c' según tus necesidades
+
+	if (ft_isprint(c))
+		printf("El carácter '%c' es imprimible.\n", c);
+	else
+		printf("El carácter '%c' no es imprimible.\n", c);
+
+	return (0);
+}*/

@@ -24,3 +24,14 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
+/*int	main(void)
+{
+	int c = 'A'; // Cambia el valor de 'c' según lo que quieras probar
+
+	if (ft_isalnum(c))
+		printf("%c es un carácter alfanumérico.\n", c);
+	else
+		printf("%c no es un carácter alfanumérico.\n", c);
+
+	return 0;
+}*/
